@@ -8,7 +8,21 @@ const config: IConfig =  {
       path: '/',
       component: '../layouts/index',
       routes: [
-        { path: '/', component: '../pages/index' }
+        {
+          path: '/home',
+          component: '../pages/home',
+          title: '首页'
+        },
+        {
+          path: '/order',
+          component: '../pages/order',
+          title: '订单'
+        },
+        {
+          path: '/user',
+          component: '../pages/user',
+          title: '用户'
+        }
       ]
     }
   ],
@@ -20,7 +34,7 @@ const config: IConfig =  {
       dynamicImport: false,
       title: 'lvyouapp',
       dll: false,
-      
+
       routes: {
         exclude: [
           /components\//,
