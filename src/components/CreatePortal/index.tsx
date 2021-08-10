@@ -9,17 +9,17 @@ export default class CreatePortal extends Component<any, any> {
     super(props);
 
     this.body = document.querySelector('body');
-    this.el = document.createElement('dev');
+    this.el = document.createElement('div');
   }
 
   componentDidMount() {
     this.el.setAttribute('id', 'portal-root');
-    this.body = document.appendChild(this.el);
+    this.body = document.body.appendChild(this.el);
   }
 
   componentWillUnmount() {
     if (this.body) {
-      this.body.removeChild(this.el);
+      document.body.removeChild(this.el);
     }
   }
 
